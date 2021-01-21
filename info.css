@@ -1,0 +1,36 @@
+body{
+    width: 600px;
+    margin: auto;
+    background-color:rgb(176, 163, 223);
+}
+
+.title {    
+    /* display: block;
+    border: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Courier New', monospace;
+    z-index: 1;
+}
+
+.contents {
+    background-image: url("background.png");
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.image1 {
+    position: fixed;
+    margin-left: 60%;
+    margin-right: 50%;
+    z-index: 5;
+}
+
+ul{
+    text-align: left;
+}
