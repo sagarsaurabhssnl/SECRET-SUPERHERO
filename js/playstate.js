@@ -2,6 +2,7 @@
 function gamestateplay() {
     if (gamestate === "play") {
         gameover.visible = false;
+        difficultyButton.visible = false;
         fire();
         playermovement();
         zombiespawn();

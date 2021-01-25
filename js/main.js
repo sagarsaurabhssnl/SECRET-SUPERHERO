@@ -22,11 +22,12 @@ let bgMyGroup;
 let font;
 let score = 0, startImg, start;
 let infoHtml, infoImg;
+let difficultyButton, onImg, offImg, difficulty = "on", clicked = false;
 
 // //Loading Images
 function preload() {
     // alert("Remove headphones or minimise it's volume");    
-    firesound= loadSound("firesound.mp3");
+    firesound = loadSound("firesound.mp3");
     startImg = loadImage("start.png");
     infoImg = loadImage("i.png");
     font = loadFont("fonts/ShriftSteamy.otf");
@@ -91,12 +92,13 @@ function preload() {
     load(pimg6);
     pimg7 = loadAnimation("p/7/1.png", "p/7/2.png", "p/7/3.png", "p/7/4.png");
     load(pimg7);
+    onImg = loadImage("on.png");
+    offImg = loadImage("off.png");
 }
 //Creating sprites and setting them on the canvas
 function setup() {
     var gameCanvas = createCanvas(displayWidth, displayHeight);
     //CREATING SPRITES AND GROUPS AND ADDING THEIR PROPERTIES
-
     player = createSprite(displayWidth, displayHeight);
     player.addAnimation("myplayer", playerimg);
     player.setCollider("rectangle", 0, 0, 200, 300);
@@ -123,6 +125,10 @@ function setup() {
     zombiegroup = new Group();
     zgMyGroup = new myGroup(zg, 20);
     bgMyGroup = new myGroup(bg, 6);
+    difficultyButton = createSprite(displayWidth + 500, displayHeight - 300);
+    difficultyButton.addImage("on", onImg);
+    difficultyButton.addImage("off", offImg);
+    difficultyButton.scale = 0.5;
 }
 
 //Drawing Elements
@@ -146,6 +152,14 @@ function draw() {
     fill(0);
     text("Press C to get the code", player.x - 670, player.y + 260);
     text("Press R to reload game", player.x - 670, player.y + 240);
+    if (gamestate === "mainmenu") {
+        push();
+        textFont(font, 30);
+        fill("red");
+        text("Difficulty: ", displayWidth + 300, displayHeight - 300);
+        text(difficulty, displayWidth + 500, displayHeight - 250);
+        pop();
+    }
     if (gamestate === "play" || gamestate === "end") {
         push();
         textFont(font, 80);

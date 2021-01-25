@@ -12,6 +12,23 @@ function gamestatemainmenu() {
             info.style.display = "block";
             canvas.style.display = "none";
         }
+        if (mousePressedOver(difficultyButton)) {
+            if (difficulty === "off" && clicked === false) {
+                clicked = true;
+                difficultyButton.changeImage("on");
+                difficulty = "on";
+                setTimeout(() => {
+                    clicked = false
+                }, 100);
+            } else if (difficulty === "on" && clicked === false) {
+                clicked = true;
+                difficultyButton.changeImage("off");
+                difficulty = "off";
+                setTimeout(() => {
+                    clicked = false
+                }, 100);
+            }
+        }
     }
 }
 

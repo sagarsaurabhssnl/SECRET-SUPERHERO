@@ -40,10 +40,12 @@ function peopleSpawn() {
 }
 
 function peopledown() {
-    for (var pd = 1; pd < bg.length; pd++) {
-        if (bg[pd].isTouching(peoples)) {
-            bg[pd].destroyEach();
-            health -= 10;
+    if (difficulty === "on") {
+        for (var pd = 1; pd < bg.length; pd++) {
+            if (bg[pd].isTouching(peoples)) {
+                bg[pd].destroyEach();
+                health -= 10;
+            }
         }
     }
 }
