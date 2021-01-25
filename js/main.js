@@ -164,7 +164,7 @@ function draw() {
         push();
         textFont(font, 80);
         fill("red");
-        text("Kills: " + kill, player.x + 350, player.y - 300);
+        text("Kills: " + kill, player.x + 250, player.y - 300);
         pop();
     }
     camera.position.x = player.x;
