@@ -1,10 +1,10 @@
-body{
+body {
     width: 600px;
     margin: auto;
-    background-color:rgb(176, 163, 223);
+    background-color: rgb(176, 163, 223);
 }
 
-.title {    
+.title {
     /* display: block;
     border: 8px;
     position: absolute;
@@ -18,10 +18,15 @@ body{
 }
 
 .contents {
-    background-image: url("background.png");
+    background-image: url("backgroundinfo.jpg");
+    background-size: cover;
     text-align: center;
     font-family: 'Courier New', monospace;
     font-weight: bold;
+}
+
+.contents .rules {
+    background-color: rgba(240, 248, 255, 0.5);
 }
 
 .image1 {
@@ -31,6 +36,6 @@ body{
     z-index: 5;
 }
 
-ul{
+ul {
     text-align: left;
 }

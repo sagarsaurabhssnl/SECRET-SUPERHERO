@@ -1,0 +1,37 @@
+Garbaging Zombies
+
+Story:
+In the game the player means the user is the superhero of the game which
+actually kills the peoples who have turned to zombies as they throw garbage
+other than the bin.
+
+Boosters:the health increaser
+	:the mop
+
+PCs:the sperhero
+NPCs:the zombies and the peoples
+
+Goals:To spread cleanliness
+	:To empower the government workers
+Rules:The superhero shouldn't kill peoples
+	move the players using arrow keys
+	NPCs will be spawning randomly with a periodic interval
+	if player lose his health mentioned below with the bar, he will die
+	the health of the player will decrease as the zombie touches it or 
+	if the superhero kills the peoples accidentally
+	after a periodic interval of time the player will have chance to increase
+	his health via boosters
+
+Feedback: Message to the players- The peoples who are saving the world are being
+	killed by the destroyer itself
+
+Obstacles: the zombies are the peoples which are hidden among the good peoples itself
+	and they are being protectect anonymously
+
+The game revolves completely around skills
+
+Balanced:
+
+Difficulty: Most the peoples are somehow zombies only who are spreading garbage
+Easy:The Easiest way is to clean the society not to destroy it
+	There are 
