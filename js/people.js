@@ -1,6 +1,7 @@
 function peopleSpawn() {
+    let zombiex = [-100, displayWidth * 2 + 100];
     if (frameCount % 10 === 0) {
-        people = createSprite(random(zombiex), Math.round(random(444, 1218)));
+        people = createSprite(random(zombiex), Math.round(random(displayHeight / 2, (displayHeight * 2) - (displayHeight / 2))));
         if (people.x < 800) {
             people.velocityX = 3;
         } else if (people.x > 1800) {

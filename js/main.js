@@ -10,7 +10,6 @@ let pimg1, pimg2, pimg3, pimg4, pimg5, pimg6, pimg7, peoples;
 let bulletgroupassign = 1;
 let zombiegroupassign = 1;
 let bulletreloadtime = 1;
-let zombiex = [50, 2650];
 let kill = 0;
 let restart;
 let people;
@@ -98,6 +97,7 @@ function preload() {
 //Creating sprites and setting them on the canvas
 function setup() {
     var gameCanvas = createCanvas(displayWidth, displayHeight);
+    console.log(displayWidth)
     //CREATING SPRITES AND GROUPS AND ADDING THEIR PROPERTIES
     player = createSprite(displayWidth, displayHeight);
     player.addAnimation("myplayer", playerimg);
@@ -135,7 +135,7 @@ function setup() {
 function draw() {
     // canvas.style.display = "none";
     //SETTING UP THE BACKGROUND
-    background(150);
+    background(100);
     image(back, 0, 0, displayWidth * 2, displayHeight * 2);
     gameover.x = camera.position.x;
     gameover.y = camera.position.y;
@@ -150,8 +150,8 @@ function draw() {
     gamestateend();
     drawSprites();
     fill(0);
-    text("Press C to get the code", player.x - 670, player.y + 260);
-    text("Press R to reload game", player.x - 670, player.y + 240);
+    text("Press C to get the code", player.x - (displayWidth / 2) + 10, player.y + (displayHeight / 2) - 110);
+    text("Press R to reload game", player.x - (displayWidth / 2) + 10, player.y + (displayHeight / 2) - 130);
     if (gamestate === "mainmenu") {
         push();
         textFont(font, 30);
@@ -164,7 +164,7 @@ function draw() {
         push();
         textFont(font, 80);
         fill("red");
-        text("Kills: " + kill, player.x + 250, player.y - 300);
+        text("Kills: " + kill, player.x + displayWidth / 2 - 300, player.y - displayHeight / 2 + 200);
         pop();
     }
     camera.position.x = player.x;

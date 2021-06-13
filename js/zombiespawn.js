@@ -1,7 +1,8 @@
 //SPAWNING ZOMBIES WITH FRAME COUNT
 function zombiespawn() {
+    let zombiex = [-100, displayWidth * 2 + 100];
     if (frameCount % 50 === 0) {
-        zombie = createSprite(random(zombiex), Math.round(random(444, 1100)));
+        zombie = createSprite(random(zombiex), Math.round(random(displayHeight / 2, (displayHeight * 2) - (displayHeight / 2))));
         if (zombie.x < 800) {
             zombie.velocityX = 3;
             zombie.mirrorX(-1);
@@ -67,7 +68,7 @@ function zombiespawn() {
         }
         //PROPERTIES OF ZOMBIES
         zombie.scale = 0.4;
-        zombie.lifetime = 1000;
+        zombie.lifetime = 1500;
         //ADDIND ZOMBIES TO GROUPS
         zombiegroup.add(zombie);
         zombiegroupassignreset();
